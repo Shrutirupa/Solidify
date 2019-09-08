@@ -34,6 +34,7 @@ def usage(script):
 def firstStep(fileName):
 	"To add an extention to the end of the file"
 	print "I guess i am in firstStep function \n"
+
 	pass
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -43,10 +44,16 @@ def firstStep(fileName):
 def main(argv):
 	"To take the name of the solidity file through command line"
 	fileName = ""
-	if len(argv) < 2:
-		usage(this_script)
-		sys.exit(1)
+	this_script = argv[0]
 
+	if len(argv) < 3:
+	#	print hello
+		usage(this_script)
+		sys.exit(3)
+
+	pass 
+
+	#print len(argv)
 	try:
 		opts, args = getopt.getopt(argv[1:], "i:",["in="])
 
